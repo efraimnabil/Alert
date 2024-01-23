@@ -1,0 +1,32 @@
+// Danger
+$errorBg: rgb(192 29 29 / 15%);
+$errorColor: #ef8d8dfa;
+
+.alert-danger{
+    background-color: $errorBg;
+    color: $errorColor;
+    padding: 1.3rem;
+    border-radius: 0.8rem;
+
+    .alert-header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .title{
+            display: flex;
+            align-items: center;
+        }
+
+        span svg{
+            margin-right: 0.5rem;
+        }
+    }
+
+    p{
+        font-size: 0.9rem;
+        font-weight: 500;
+        line-height: 1.5;
+        margin-top: 1.2rem;
+    }
+}
