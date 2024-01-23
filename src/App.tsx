@@ -1,6 +1,6 @@
 import './App.css'
 import Alert from './components/Alert/Alert'
-import {Ban} from "lucide-react"
+import { AlertTriangle, Ban, Bell, CheckCheck, Info } from "lucide-react";
 function App() {
 
   return (
@@ -8,7 +8,7 @@ function App() {
       <Alert 
         type = "alert-default"
         title = "Default"
-        icon = {<Ban size={24} />}
+        icon = {<Bell size={24} />}
         >
           <p>
             This is an alert with default type , 
@@ -20,14 +20,14 @@ function App() {
       <Alert 
         type = "alert-info"
         title = "Info"
-        icon = {<Ban size={24} />}
-        description = "This is an alert with success type"
+        icon = {<Info size={24} />}
+        description = "This is an alert with info type"
       />
 
       <Alert 
         type = "alert-warning"
         title = "Warning"
-        icon = {<Ban size={24} />}
+        icon = {<AlertTriangle size={24} />}
         description = "This is an alert with warning type"
       />
 
@@ -41,7 +41,7 @@ function App() {
       <Alert 
         type = {"alert-success"}
         title = {"Success"}
-        icon = {<Ban size={24} />}
+        icon = {<CheckCheck size={24} />}
         description = "This is an alert with success type"
       />
     </div>
