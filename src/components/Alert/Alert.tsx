@@ -1,15 +1,17 @@
 import { ReactNode } from "react";
 import "./index.scss"
 import { X } from 'lucide-react';
+import { alertTypes } from "../../types";
 
 interface IProps {
-  type: string,
+  type: alertTypes,
   title: string,
   icon: ReactNode,
-  description: string
+  description?: string,
+  children?: ReactNode
 }
 
-const alert = ({type, title, icon, description}: IProps) => {
+const alert = ({type, title, icon, description, children}: IProps) => {
   return (
     <div className={type}>
       
@@ -25,10 +27,7 @@ const alert = ({type, title, icon, description}: IProps) => {
         <X size={24} />
       </div>
 
-      <p className='alert-content'>
-        {description}
-      </p>
-
+        { children ? children : <p> {description} </p> }
     </div>
   )
 }

@@ -4,14 +4,47 @@ import {Ban} from "lucide-react"
 function App() {
 
   return (
-    <>
+    <div className='App'>
       <Alert 
-        type = {"alert-danger"}
-        title = {"something went wrong"}
+        type = "alert-default"
+        title = "Default"
         icon = {<Ban size={24} />}
-        description = "This is an alert with danger type"
+        >
+          <p>
+            This is an alert with default type , 
+            it has a description and a child component and you can add link like this <a href="https://www.google.com">Google</a>
+          </p>
+      </Alert>
+
+
+      <Alert 
+        type = "alert-info"
+        title = "Info"
+        icon = {<Ban size={24} />}
+        description = "This is an alert with success type"
       />
-    </>
+
+      <Alert 
+        type = "alert-warning"
+        title = "Warning"
+        icon = {<Ban size={24} />}
+        description = "This is an alert with warning type"
+      />
+
+      <Alert 
+        type = {"alert-error"}
+        title = {"Error"}
+        icon = {<Ban size={24} />}
+        description = "This is an alert with error type"
+      />
+
+      <Alert 
+        type = {"alert-success"}
+        title = {"Success"}
+        icon = {<Ban size={24} />}
+        description = "This is an alert with success type"
+      />
+    </div>
   )
 }
 
